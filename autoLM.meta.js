@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name          HKG Auto Reply LM
 // @author        indream
-// @version       0.1.1
+// @version       0.1.2
 // @description   HKG Auto Reply LM
 // @namespace     https://github.com/inDream
 // @updateURL     https://raw.githubusercontent.com/inDream/hkg-autoLM/master/autoLM.meta.js

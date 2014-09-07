@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name          HKG Auto Reply LM
 // @author        indream
-// @version       0.1.1
+// @version       0.1.2
 // @description   HKG Auto Reply LM
 // @namespace     https://github.com/inDream
 // @updateURL     https://raw.githubusercontent.com/inDream/hkg-autoLM/master/autoLM.meta.js
@@ -53,5 +53,12 @@ var autoLM = function(){
 }
 LMbtn.addEventListener("click", autoLM, false);
 
-var btn = document.querySelector('#ctl00_ContentPlaceHolder1_btn_Submit');
-btn.parentNode.appendChild(LMbtn);
+var insertBtn = function(){
+    var btn = document.querySelector('#ctl00_ContentPlaceHolder1_btn_Submit');
+    if(btn){
+        btn.parentNode.appendChild(LMbtn);
+    }else{
+        setTimeout(insertBtn, 1000);
+    }
+}
+insertBtn();
